@@ -2,7 +2,7 @@
 
 ## 1. 제출물 (GitHub repo)
 
-repo 루트에 다음 파일을 둡니다. URL 만 폼으로 제출. **Public repo 만 허용 (Private 금지).**
+Repository 루트에 다음 파일을 저장합니다. iclass에는 URL 만 폼으로 제출. **Public repo 만 허용 (Private 금지).**
 
 | 파일 | 누가 |
 |------|------|
@@ -106,6 +106,8 @@ def main():
 3. **Agent AI(e.g., ChatGPT, Claude Code, Gemini 등) 활용 방안** — 어떤 Agent AI를 어떤 방식으로 활용하였는지 구체적으로 작성(AI와 본인의 역할 구분 필요).
 4. **결과 도출 & 디스커션** — 수치의 단순 비교 X. 본인의 사고와 구현이 적합했는가 / baseline과의 비교가 fair 한가 (예: 딥러닝 vs 단순 삼각측량 비교는 unfair) / 알고리즘의 장점·단점 / future work / 본인이 사용한 자체 평가 방식의 fairness.
 (참고한 논문의 경우, 레퍼런스 달기)
+
+
 ### 5.2 형식 제한 (엄격)
 
 | 제한 | 이유 |
