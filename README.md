@@ -65,7 +65,7 @@ def main():
     # 1) 입력 데이터 로드 — 채점기가 같은 폴더에 .mat 파일 자동 배치
     mat_path  = 'DH_FR1.mat'
     
-    data = sio.loadmat(data_path, squeeze_me=False)
+    data = sio.loadmat(mat_path, squeeze_me=False)
     p_bs   = np.asarray(data['p_bs'], dtype=float)     # (2, 18)
     d_hat  = np.asarray(data['d_hat'], dtype=float)    # (18, num_user)
     p      = np.asarray(data['p'], dtype=float)        # (2, num_user) — GT 위치
