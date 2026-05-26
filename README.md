@@ -43,7 +43,7 @@ Repository 루트에 다음 파일을 저장합니다. iclass에는 URL 만 폼�
 |------|------|------|
 | `p`     | (2, N) | 정답 사용자 위치 (x, y) |
 | `d_hat` | (18, N) | 18개 기지국이 측정한 RTT |
-| `p_bs`  | (2, 18) | 18개 기지국의 좌표 |
+| `BS_positions`  | (2, 18) | 18개 기지국의 좌표 |
 
 전체 사용자 (UE) 는 **1000명**. 그 중 **700명 만 학생에게 제공**, 나머지 **300명** 은 조교가 hidden test set 으로 보유. 채점 시 채점기는 hidden 데이터로 학생 main.py 를 실행합니다 → 학생이 받은 데이터에만 over-fit 한 코드는 손해.
 
@@ -66,7 +66,7 @@ def main():
     mat_path  = 'DH_FR1.mat'
     
     data = sio.loadmat(mat_path, squeeze_me=False)
-    p_bs   = np.asarray(data['p_bs'], dtype=float)     # (2, 18)
+    BS_positions   = np.asarray(data['BS_positions'], dtype=float)     # (2, 18)
     d_hat  = np.asarray(data['d_hat'], dtype=float)    # (18, num_user)
     p      = np.asarray(data['p'], dtype=float)        # (2, num_user) — GT 위치
 
@@ -74,7 +74,7 @@ def main():
     num_user = d_hat.shape[1]
     p_hat = np.zeros((2, num_user))
     for u in range(num_user):
-        p_hat[:, u] = your_algorithm(d_hat[:, u], p_bs)
+        p_hat[:, u] = your_algorithm(d_hat[:, u], BS_positions)
 
     # 3) 결과 반환 — numpy 배열, 모양 (2, num_user)
     return p_hat
