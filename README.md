@@ -147,3 +147,8 @@ def main():
 - 1분반 - sanghyeok.kim@inha.edu
 - 2분반 - kimjaehong@inha.edu
 - jh.koo@inha.edu
+
+---
+
+## 9. 수정사항
+- main.py 함수 예시 오류 수정 (260526)
